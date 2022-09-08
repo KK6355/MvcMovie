@@ -1,0 +1,10 @@
+﻿@{       
+    ViewData["Title"] = "Welcom";
+}
+<h2>Welcome</h2>
+<ul>
+    @for (int i = 0; i < (int)ViewData["NumTimes"]!; i++)  //! here is  a null-forgiving operator, it avoids the warning of null
+    { 
+        <li>@ViewData["Message"]</li>
+    }
+</ul>
